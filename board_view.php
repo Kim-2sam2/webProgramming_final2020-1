@@ -41,9 +41,9 @@ mysqli_close($con);
     <script type="text/javascript" src="scripts/mylist.js"></script>
 </head>
 <style>
-form {
-    display: none;
-}
+    form {
+        display: none;
+    }
 </style>
 
 <body>
@@ -110,6 +110,9 @@ form {
                         echo ("
                             <li>
                                 <div onclick=locate('mylist_delete.php?num=$list_index&userid=$userid')>게시글삭제</div>
+                            </li>
+                            <li>
+                                <div onclick=locate('mylist_update_form.php?num=$list_index&page=$page')>게시글수정</div>
                             </li>
                             <li>
                                 <div onclick = locate('mylist.php')>내 목록</div>
