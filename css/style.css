@@ -1,97 +1,200 @@
-:root {
-  /*color*/
-  --main-green-color: #00695c;
-  --dark-green-color: #003d32;
-  --ligt-green-color: #439688;
-  --main-brown-color: #795548;
-  --dark-brown-color: #4b2c20;
-  --light-brown-color: #a98274;
-  --gray-color: #e0e0e0;
-  --white-color: #fafafa;
-
-  /*Size*/
-  --up--padding: 10px;
-  --side-padding: 20px;
-  --max-width: 1300px;
-  --min-width: 800px;
-
-  /*Font size*/
-  --font-super: 24px;
-  --font-large: 20px;
-  --font-medium: 18px;
-  --font-small: 16px;
-  --font-micro: 10px;
+/* 게시판 글쓰기(board_form.php) */
+#board_box {
+  position: relative;
+  width: 800px;
+  margin: 0 auto;
+  padding-top: 5px;
 }
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Nanum Gothic", sans-serif;
+#board_form span {
+  display: inline-block;
+}
+#board_form .col1 {
+  width: 150px;
+}
+#board_form li {
+  padding: 12px;
+  border-bottom: solid 1px #dddddd;
+}
+#board_form input {
+  width: 500px;
+  height: 25px;
+}
+#board_form textarea {
+  width: 500px;
+  height: 150px;
+}
+#board_form #text_area {
+  position: relative;
+  height: 158px;
+}
+#board_form #text_area .col1 {
+  position: absolute;
+  top: 10px;
+}
+#board_form #text_area .col2 {
+  position: absolute;
+  left: 166px;
+}
+#board_box .buttons {
+  text-align: right;
+  margin: 60px 12px 10px 0;
+}
+#board_box .buttons li {
+  display: inline;
 }
 
-ul {
-  list-style-type: none;
-}
-
-input {
+#board_box .buttons div {
+  display: inline;
   border: 2px solid black;
   border-radius: 6px;
+  padding: 5px 10px;
+  cursor: pointer;
+  text-align: center;
+  background: white;
 }
-
-a,
-a:visited {
-  color: inherit;
-  text-decoration: none;
+#board_box .buttons button {
+  padding: 5px 10px;
+  cursor: pointer;
 }
-
-.wrapper {
-  max-width: var(--max-width);
-  min-width: var(--min-width);
+/* 게시판 목록보기(board_list.php) */
+#board_list li {
+  padding: 10px 0;
+  border-bottom: solid 1px #dddddd;
+  text-align: center;
+}
+#board_list span {
+  display: inline-block;
+  text-align: center;
+}
+#board_list .col1 {
+  width: 80px;
+}
+#board_list .col2 {
+  width: 250px;
+  text-align: left;
+}
+#board_list .col3 {
+  width: 100px;
+}
+#board_list .col4 {
+  width: 180px;
+}
+#board_list .col5 {
+  width: 60px;
+}
+#page_num {
+  text-align: center;
+  margin: 30px 0;
+}
+#page_num li {
+  display: inline;
+}
+/* 게시판 내용보기(board_view.php) */
+#board_box {
+  width: 800px;
   margin: 0 auto;
-  background: #eeeeee;
+  border: 3px solid black;
   border-radius: 6px;
 }
-
-.middle {
-  display: flex;
-  justify-content: space-between;
-  padding: 5px 0;
-  margin-top: 5px;
+#board_box .title {
+  margin-top: 30px;
+  padding: 10px;
+  border-bottom: solid 2px #516e7f;
+  font-size: 20px;
+}
+#viewer #top {
+  padding: 15px;
+  border-bottom: solid 3px #aaaaaa;
+  font-size: 24px;
 }
 
-.footer {
-  display: grid;
-  grid-template-columns: minmax(550px, 650px) minmax(550px, 650px);
-  border-radius: 6px;
-  margin-top: 5px;
-  background: #78909c;
-  margin-bottom: 10px;
+#viewer .col2 {
+  float: right;
+  font-size: 16px;
+}
+#viewer .col3 {
+  float: right;
+
+  font-size: 16px;
 }
 
-.footer #home {
-  text-align: center;
-  line-height: 70px;
+#viewer #content {
+  margin-top: 20px;
+}
+
+#viewer #content input {
+  float: left;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+#viewer #content #update_input {
+  margin-left: 100px;
+  height: 25px;
+}
+
+#viewer #content li {
+  border-bottom: 2px solid black;
+  line-height: 52px;
+  width: 500px;
+  margin: 0 auto;
   vertical-align: middle;
-}
-
-.footer #home a {
-  font-size: 40px;
-  color: black;
-}
-
-.footer #info {
-  display: grid;
-  grid-template-columns: minmax(225px, 325px) minmax(225px, 325px);
-  grid-template-rows: 42px 42px;
-  align-items: stretch;
-}
-
-.footer #info div {
   text-align: center;
-
-  line-height: 42px;
+  font-size: 18px;
 }
-.footer #name {
-  grid-column: 2/3;
+
+#view #content li:first-child {
+  padding-top: 25px;
+}
+
+/*ranking*/
+
+#ranking_list li {
+  padding: 10px 0;
+  border-bottom: solid 1px #dddddd;
+  text-align: center;
+  font-size: 18px;
+}
+#ranking_list li:first-child {
+  font-size: 20px;
+}
+#ranking_list span {
+  display: inline-block;
+  text-align: center;
+}
+#ranking_list .col1 {
+  width: 100px;
+}
+#ranking_list .col2 {
+  width: 100px;
+}
+#ranking_list .col3 {
+  width: 100px;
+}
+#ranking_list .col4 {
+  width: 100px;
+}
+
+#update {
+  display: block;
+  text-align: center;
+}
+
+#update li {
+  display: inline-block;
+  text-align: center;
+}
+
+#update form {
+  text-align: center;
+}
+
+#update #c {
+  display: inline-block;
+}
+#update #con {
+  width: 300px;
+  height: 30px;
+  font-size: 20px;
+  text-align: center;
 }
