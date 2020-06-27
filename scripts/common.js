@@ -1,7 +1,12 @@
 function back_page() {
-    history.back();
+  history.back();
 }
 
 function locate(x) {
-    location.href = x;
+  location.href = x;
+}
+
+function mySubmit(form) {
+  var button = document.getElementById(form);
+  button.submit();
 }
