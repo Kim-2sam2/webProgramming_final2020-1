@@ -27,7 +27,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Nanum Gothic', sans-serif;
+  font-family: "Nanum Gothic", sans-serif;
 }
 
 ul {
@@ -39,17 +39,17 @@ input {
   border-radius: 6px;
 }
 
-  a, a:visited {
-    color: inherit;
-    text-decoration: none;
-
+a,
+a:visited {
+  color: inherit;
+  text-decoration: none;
 }
 
 .wrapper {
   max-width: var(--max-width);
   min-width: var(--min-width);
   margin: 0 auto;
-  background: #EEEEEE;
+  background: #eeeeee;
   border-radius: 6px;
 }
 
@@ -57,15 +57,15 @@ input {
   display: flex;
   justify-content: space-between;
   padding: 5px 0;
-  margin-top:5px;
+  margin-top: 5px;
 }
 
 .footer {
   display: grid;
-  grid-template-columns: 650px 650px;
+  grid-template-columns: minmax(550px, 650px) minmax(550px, 650px);
   border-radius: 6px;
   margin-top: 5px;
-  background: #78909C;
+  background: #78909c;
   margin-bottom: 10px;
 }
 
@@ -75,14 +75,14 @@ input {
   vertical-align: middle;
 }
 
-.footer #home a{
+.footer #home a {
   font-size: 40px;
   color: black;
 }
 
 .footer #info {
   display: grid;
-  grid-template-columns: 325px 325px;
+  grid-template-columns: minmax(225px, 325px) minmax(225px, 325px);
   grid-template-rows: 42px 42px;
   align-items: stretch;
 }
@@ -91,10 +91,7 @@ input {
   text-align: center;
 
   line-height: 42px;
-
 }
 .footer #name {
   grid-column: 2/3;
 }
-
-

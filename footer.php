@@ -3,6 +3,7 @@
 </div>
 
 <div id="info">
+    <div id="subject">웹프로그래밍 2020-1</div>
     <div id="name">20160705 김현우</div>
     <div id="email">
         <i class="far fa-envelope"></i>
