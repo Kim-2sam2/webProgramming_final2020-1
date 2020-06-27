@@ -1,0 +1,43 @@
+.main {
+  width: 100%;
+  margin-right: 20px;
+  background: var(--ligt-green-color);
+  border-radius: 6px;
+}
+
+.main ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  padding: var(--side-padding);
+}
+
+.main li {
+  font-size: var(--font-medium);
+}
+
+.main .content {
+  display: grid;
+  border: 3px solid white;
+  border-radius: 6px;
+  text-align: center;
+  margin: var(--side-padding);
+}
+
+.main .content .id {
+  font-size: var(--font-super);
+  border-bottom: 3px solid white;
+  padding: 5px 0;
+}
+
+.main .content .todo {
+  display: inline;
+}
+
+.main .content .todo li {
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 300px;
+}

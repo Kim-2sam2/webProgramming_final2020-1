@@ -1,0 +1,100 @@
+:root {
+  /*color*/
+  --main-green-color: #00695c;
+  --dark-green-color: #003d32;
+  --ligt-green-color: #439688;
+  --main-brown-color: #795548;
+  --dark-brown-color: #4b2c20;
+  --light-brown-color: #a98274;
+  --gray-color: #e0e0e0;
+  --white-color: #fafafa;
+
+  /*Size*/
+  --up--padding: 10px;
+  --side-padding: 20px;
+  --max-width: 1300px;
+  --min-width: 800px;
+
+  /*Font size*/
+  --font-super: 24px;
+  --font-large: 20px;
+  --font-medium: 18px;
+  --font-small: 16px;
+  --font-micro: 10px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+input {
+  border: 2px solid black;
+  border-radius: 6px;
+}
+
+  a, a:visited {
+    color: inherit;
+    text-decoration: none;
+
+}
+
+.wrapper {
+  max-width: var(--max-width);
+  min-width: var(--min-width);
+  margin: 0 auto;
+  background: #EEEEEE;
+  border-radius: 6px;
+}
+
+.middle {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  margin-top:5px;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 650px 650px;
+  border-radius: 6px;
+  margin-top: 5px;
+  background: #78909C;
+  margin-bottom: 10px;
+}
+
+.footer #home {
+  text-align: center;
+  line-height: 70px;
+  vertical-align: middle;
+}
+
+.footer #home a{
+  font-size: 40px;
+  color: black;
+}
+
+.footer #info {
+  display: grid;
+  grid-template-columns: 325px 325px;
+  grid-template-rows: 42px 42px;
+  align-items: stretch;
+}
+
+.footer #info div {
+  text-align: center;
+
+  line-height: 42px;
+
+}
+.footer #name {
+  grid-column: 2/3;
+}
+
+

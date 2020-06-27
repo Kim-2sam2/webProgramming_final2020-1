@@ -1,0 +1,112 @@
+p{
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #eeeeee;
+}
+
+input {
+  border: 1px solid black;
+}
+
+.middle .aside {
+  width: 290px;
+  height: 400px;
+  position: sticky;
+  top: 10px;
+  padding: var(--side-padding);
+  background: var(--main-brown-color);
+  border-radius: 6px;
+
+}
+
+.middle .user_login {
+  display: grid;
+  grid-template-columns: 200px 60px;
+  
+}
+.middle .aside form {
+  display: grid;
+  grid-template-columns: 140px 60px;
+  grid-template-rows: 20px 20px;
+  row-gap: 3px;
+
+  justify-items: center;
+}
+
+.middle #login_box {
+  border-bottom: 3px solid black;
+}
+
+.middle .aside .id {
+  width: 140px;
+}
+
+.middle .aside .pw {
+  width: 140px;
+  grid-row: 2/3;
+}
+.middle .aside .login {
+  width: 60px;
+  height: 43px;
+}
+
+.middle .aside .signup {
+  width: 60px;
+  height: 43px;
+}
+
+.middle .aside .sidebar {
+  height: 250px;
+  margin-top: 20px;
+  border-radius: 6px;
+  text-align: center;
+
+}
+
+.middle .user_info {
+  text-align: center;
+}
+
+.middle .user_info div {
+  padding-bottom: 10px;
+}
+
+.sidebar #title {
+  grid-column: 2/3;
+  line-height: 60px;
+  font-size: var(--font-super);
+  text-align: center;
+  border-bottom: 3px solid black;
+}
+
+.sidebar #side_todo_list {
+  grid-column: 2/3;
+  height: 250px;
+  float: center;
+  background: grey;
+  overflow: auto;
+  border-radius: 6px;
+}
+
+.sidebar #side_todo_list li {
+  padding: 10px 0;
+  background: white;
+  border-bottom: 3px solid black;
+  width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sidebar #side_todo_list div {
+  text-align: center;
+}
+
+.sidebar #side_todo_list form {
+  display: none;
+}
+.sidebar .side_check {
+  float: left;
+  margin-top: 5px;
+
+}
