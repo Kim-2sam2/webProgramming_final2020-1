@@ -68,24 +68,24 @@ form {
                                 $content = $row["content"];
                                 $finish = $row["finish"];
                                 $todo_index = $row["todo_index"];
-                                echo ("<form id='update' method='post' action='mylist_update.php?list_index=<?= $list_index ?>'>");
-                            echo ('<li>');
+                                echo ("<form id='update' method='post' action='mylist_update.php?list_index=$list_index'>");
+                                echo ('<li>');
 
                                 if ($finish) {
-                                echo ("<input id='c' type='checkbox' checked='checked'>");
+                                    echo ("<input id='c' type='checkbox' checked='checked'>");
                                 } else {
-                                echo ("<input id='c' type='checkbox'>");
+                                    echo ("<input id='c' type='checkbox'>");
                                 }
                                 echo ("<input type='hidden' name='index[]' value='$todo_index'>");
                                 echo ("<div><input id='con' type='text' name='content[]' value='$content'></div>");
 
-                                ?>
-                                <?php
+                            ?>
+                            <?php
                                 echo ("</li>");
                             } while ($row = mysqli_fetch_array($result));
 
                             ?>
-                                </form>
+                            </form>
                         </ul>
                     </li>
                 </ul>
