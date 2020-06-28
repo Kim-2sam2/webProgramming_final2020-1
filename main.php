@@ -10,7 +10,7 @@
 
         $con = connectDB();
         $sql = "select L.num, L.id, L.title from todoList_20160705 L
-        order by L.regist_day limit  6";
+        order by L.regist_day desc limit  6";
         $list = mysqli_query($con, $sql);
         if (!$list) {
             echo "생성된 테이블이 없습니다.";
