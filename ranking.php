@@ -3,7 +3,7 @@ include 'func.php';
 session_start();
 
 $con = connectDB();
-$sql = "select id, count(num) as content, sum(likes) as likes, sum(complete) as complete from todoList_20160705 group by id order by complete desc";
+$sql = "select id, count(num) as content, sum(likes) as likes, sum(complete) as complete from todoList_20160705 group by id order by complete desc, likes desc";
 $result = mysqli_query($con, $sql);
 ?>
 <!DOCTYPE html>
