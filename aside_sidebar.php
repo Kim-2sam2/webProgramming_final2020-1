@@ -8,11 +8,11 @@ $num_match = mysqli_num_rows($result);
 $row = mysqli_fetch_array($result);
 
 if ($num_match) {
-    $list_num = $row["num"];
+    $list_index = $row["num"];
 
     $sql = "select T.content, T.finish, T.num, L.title, L.complete from todo_20160705 T
     inner join todoList_20160705 L on L.num = T.list
-    where L.id = '$userid' and T.list = '$list_num'";
+    where L.id = '$userid' and T.list = '$list_index'";
     $result = mysqli_query($con, $sql);
 
     $num_match = mysqli_num_rows($result);
@@ -32,7 +32,7 @@ if ($num_match) {
         //echo ("<script> view_todo('$content', $fin, $num) </script>");
 ?>
 <li>
-    <form method="post" id=<?= $num ?> action="checked_db.php">
+    <form method="post" id=<?= $num ?> action="checked_db.php?list=<?= $list_index ?>">
         <input type="hidden" name="checked" value=<?= $fin ?>>
         <input type="hidden" name="num" value=<?= $num ?>>
     </form>
