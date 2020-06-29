@@ -29,15 +29,17 @@ if ($num == $count) {
 }
 
 //view -1
-$sql = "select view from todoList_20160705 where num = $list_index";
-$result = mysqli_query($con, $sql);
-$row = mysqli_fetch_array($result);
-$view = $row["view"];
-$view -= 1;
+if ($_GET["isView"]) {
+    $sql = "select view from todoList_20160705 where num = $list_index";
+    $result = mysqli_query($con, $sql);
+    $row = mysqli_fetch_array($result);
+    $view = $row["view"];
+    $view -= 1;
+    $sql = "update todoList_20160705 set view = $view, complete = $complete where num = $list_index";
+    mysqli_query($con, $sql);
+    mysqli_close($con);
+}
 
-$sql = "update todoList_20160705 set view = $view, complete = $complete where num = $list_index";
-mysqli_query($con, $sql);
-mysqli_close($con);
 
 if (isset($_POST['url'])) {
     $url = $_POST["url"];

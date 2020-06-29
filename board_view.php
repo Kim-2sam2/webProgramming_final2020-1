@@ -41,9 +41,9 @@ mysqli_close($con);
     <script type="text/javascript" src="scripts/mylist.js"></script>
 </head>
 <style>
-    form {
-        display: none;
-    }
+form {
+    display: none;
+}
 </style>
 
 <body>
@@ -74,7 +74,7 @@ mysqli_close($con);
                                     $finish = $row["finish"];
                                     $todo_index = $row["todo_index"];
                                     echo ('<li>');
-                                    echo ("<form method=post id=$todo_index action=checked_db.php?list=$list_index>");
+                                    echo ("<form method=post id=$todo_index action=checked_db.php?list=$list_index&isView=1>");
                                     echo ("<input type='hidden' name='checked' value=$finish></input>");
                                     echo ("<input type='hidden' name='num' value=$todo_index></input>");
                                     echo ("<input type='hidden' name='url' value='board_view.php?num=$list_index&page=$page'></input>");
